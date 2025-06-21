@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 function CaretakerDashboard() {
   const [patients, setPatients] = useState([])
+  console.log(patients)
   const [activeTab, setActiveTab] = useState('overview')
   const token = localStorage.getItem('token')
   const navigate = useNavigate()
@@ -189,6 +190,7 @@ function CaretakerDashboard() {
             <small>Time to check if today's medication was taken</small>
           </div>
         </div>
+        
       )}
     </div>
   )

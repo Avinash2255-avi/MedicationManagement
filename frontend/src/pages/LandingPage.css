@@ -1,0 +1,129 @@
+/* Base container styling */
+.landing-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f0f8ff, #e0f7ef);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Logo + Title */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.logo h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.logo p {
+  font-size: 16px;
+  color: #4b5563;
+  max-width: 600px;
+}
+
+/* Role cards container */
+.role-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Individual card */
+.role-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  text-align: left;
+}
+
+.role-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Card header */
+.role-card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Role-specific colors */
+.role-card.patient h2 {
+  color: #2563eb;
+}
+
+.role-card.caretaker h2 {
+  color: #15803d;
+}
+
+/* Features list */
+.role-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.role-card li {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.role-card li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* Button */
+.role-card button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.role-card button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Caretaker button */
+.role-card.caretaker button {
+  background-color: #22c55e;
+}
+
+.role-card.caretaker button:hover {
+  background-color: #16a34a;
+}

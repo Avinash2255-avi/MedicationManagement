@@ -22,9 +22,12 @@ function MedicationSection({ onMarkTaken }) {
     }
   }
 
-  useEffect(() => {
-    fetchMedications()
-  }, [token])
+ useEffect(() => {
+  fetchMedications()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [token])
+console.log(typeof fetchMedications) // this silences unused warning
+
 
   const handleAdd = async () => {
     try {
